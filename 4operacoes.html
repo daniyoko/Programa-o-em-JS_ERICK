@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibe as 4 operações aritméticas</title>
+</head>
+<body>
+   <h1>Digite os valores</h1> 
+</body>
+<form id= "form">
+    <input id= "field1" type= "number" placeholder="Digite um valor">
+    <input id= "field2" type= "number" placeholder="Digite um valor">
+  
+<button>Calcular</button>
+</form>
+
+ <div id="result"></div>
+
+<script>
+function onSubmit(event){
+    event.preventDefault()
+
+let a = parseFloat(field1.value)
+let b = parseFloat(field2.value)
+
+let adição = a+b
+let subt = a-b
+let divi = a/b
+let mult = a*b
+
+result.innerHTML = `
+<ul>
+          <li>Adição: <b>${adição}</b>.</li>
+          <li>Subtração: <b>${subt}</b>.</li>
+          <li>Divisão: <b>${divi}</b>.</li>
+          <li>Multiplicação: <b>${mult}</b>.</li>
+        </ul>
+`
+
+}
+form.addEventListener('submit', onSubmit)
+</script>
+</html>

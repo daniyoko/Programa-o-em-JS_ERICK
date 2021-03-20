@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baskara</title>
+</head><h1>Calcule a função </h1>
+<body>Utilize a fórmula de báscara
+    
+<form id="form">
+<input id= "field1" type="number" placeholder="Digite valor de a">
+<p><input id= "field2" type="number" placeholder="Digite valor de b"></p>
+<p><input id= "field3" type="number" placeholder="Digite valor de c"></p>
+ <p><button>Calcular valor de X</button></p>
+
+</form>
+
+ <div id="result"></div>
+
+<script>
+function onSubmit(event){
+    event.preventDefault()
+
+let a = parseFloat(field1.value)
+let b = parseFloat(field2.value)
+let c = parseFloat(field3.value)
+
+if (isNaN(a) || isNaN(b) || isNaN(c)){
+    result.innerHTML = '<p>Confira os valores digitados!</p>'
+        return
+}
+
+let delta = b*b-4*a*c
+if (delta<0) {
+    result.innerHTML = '<p> Impossível calcular</p>'
+    return
+}
+
+let x1= (-b + Math.sqrt(delta))/(2*a)
+if (isNaN(x1) || !isFinite(x1)) {
+        result.innerHTML = '<p>Impossível calcular as raízes!</p>'
+        return
+      }
+let x2 = (-b - Math.sqrt(delta)) / (2 * a)
+
+
+result.innerHTML = `
+        <ul>
+          <li>X1: <b>${x1}</b>.</li>
+          <li>X2: <b>${x2}</b>.</li>
+        </ul>
+      `
+}
+    
+form.addEventListener('submit',onSubmit)
+</script>
+</body>
+</html>

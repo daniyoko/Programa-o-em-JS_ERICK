@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genero</title>
+</head><h1>Selecione seu genero</h1>
+<body>
+    <form= id="generoso">
+        <input id="field1" type="text" placeholder="Digite seu nome">
+
+        <select id="field2>"required>
+            <option value =''>Selecione um genero</option>
+            <option value ='f'>Feminino</option>
+            <option value = 'm'>Masculino</option>
+        </select>
+<button>ok</button>
+</form>
+<div=result></div>
+
+<script>
+
+let nome = field1.value
+let gender = field2.value
+
+if (nome === '') { result.innerHTML = 'Favor digitar seu nome'
+return
+}
+if (gender === 'f') {result.innerHTML = 'Bem vinda ${nome}'
+return
+}
+if (gender === 'm') {result.innerHTML = 'Bem vindo ${nome}'
+return
+}
+else
+
+result.innerHTML = 'Por favor faça algo'
+
+form.addEventListener('submit', onSubmit)
+</script>
+    
+</body>
+</html>

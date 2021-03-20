@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css">
+    <title>Genero</title>
+</head>
+<body><p>Cadastro de alunos</p>
+    <form= id="form" novalidate>
+    <p><input id="field1" type="text" placeholder="Digite seu nome"></p>
+     
+  <select id="field2" required>
+  
+    <option value="">Qual seu gênero</option>
+    <option value="F">Feminino</option>
+    <option value="M">Masculino</option>
+</select>
+<button>Selecionar</button>
+    </form>
+
+    <div id= "result"></div>
+
+    <script>
+
+function onSubmit(event) {
+      event.preventDefault()
+
+let nome = field1.value
+let gender = field2.value
+
+    field1.className = ''
+      field2.className = ''
+
+      if (name === '') {
+        result.innerHTML = '<p class="negative">Quanta crueldade não querer me falar seu nome!</p>'
+        field1.className = 'negative'
+        field1.focus()
+        return
+      }
+
+      if (gender === '') {
+        result.innerHTML = '<p class="negative">E que tal selecionar o gênero conforme solicitei?</p>'
+        field2.className = 'negative'
+        field2.focus()
+        return
+      }
+
+      if (gender === 'f') {
+        result.innerHTML = `<p class="women">Bem-vinda ${name}, que visão sublime vê-la por aqui!</p>`
+      } else {
+        result.innerHTML = `<p class="men">Bem-vindo ${name}, é um prazer tê-lo por aqui, mano!</p>`
+      }
+    }
+
+form.addEventListener('submit', onSubmit)
+
+    </script>
+</body>
+</html>

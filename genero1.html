@@ -7,38 +7,48 @@
     <title>Genero</title>
 </head><h1>Selecione seu genero</h1>
 <body>
-    <form= id="generoso">
+    <form id="generoso" novalid>
         <input id="field1" type="text" placeholder="Digite seu nome">
 
-        <select id="field2>"required>
+        <select id="field2"required>
             <option value =''>Selecione um genero</option>
             <option value ='f'>Feminino</option>
             <option value = 'm'>Masculino</option>
         </select>
 <button>ok</button>
 </form>
-<div=result></div>
+<div id= "result"></div>
 
 <script>
+
+function onSubmit(event) {
+      event.preventDefault()
 
 let nome = field1.value
 let gender = field2.value
 
-if (nome === '') { result.innerHTML = 'Favor digitar seu nome'
-return
-}
-if (gender === 'f') {result.innerHTML = 'Bem vinda ${nome}'
-return
-}
-if (gender === 'm') {result.innerHTML = 'Bem vindo ${nome}'
-return
-}
-else
+      field1.className = ''
+      field2.className = ''
 
-result.innerHTML = 'Por favor faça algo'
-
-form.addEventListener('submit', onSubmit)
+if (nome === '') {
+    result.innerHTML = '<p class="negative">Quanta crueldade não querer me falar seu nome!</p>'
+        field1.className = 'negative'
+        field1.focus()
+        return
+}
+if (gender === 'f') {
+                        result.innerHTML = `<Bem vinda ${nome}>`
+                        return
+}
+if (gender === 'm') {
+                        result.innerHTML = `<Bem vindo ${nome}>`
+                        return
+                        }else
+                        {
+                            result.innerHTML = `<p class="men">Bem-vindo ${nome}, é um prazer tê-lo por aqui, querido!</p>`
+      }
+    }
+generoso.addEventListener('submit', onSubmit)
 </script>
-    
-</body>
+    </body>
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><h1>Realize as quatro operações matemáticas</h1>
+    <p>Siga as orientações a seguir</p>
+<script>
+let n1 = prompt ('Digite um número')
+let n2 = prompt ('Digite um número')
+
+let r =  parseFloat(n1) + parseFloat(n2)
+let m =  parseFloat(n1) * parseFloat(n2)
+let d =  parseFloat(n1) / parseFloat(n2)
+let sub =  parseFloat(n1) - parseFloat(n2)
+let rest = n1 % n2 // incluindo resto na divisão
+
+
+
+document.write (`<ul>A soma de ${n1} + ${n2} = <b>${r}</b> </ul>`)
+document.write (`<ul>A multiplicação de ${n1} X  ${n2} = <b>${m}</b> </ul>`)
+document.write (`<ul>A divisão de ${n1} % ${n2} = <b>${d}</b></ul> `)
+document.write (`<ul>A subtração de ${n1} - ${n2} = <b>${sub}</b></ul>`)
+document.write (`<ul>O resto da divisão é ${rest}</b></ul>`)
+
+</script>
+
+</body>
+</html>

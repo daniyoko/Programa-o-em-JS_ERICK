@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calcule os valores, utilizando fórmula de bhascara</h1>
+    <p><h1>Siga as instruções</h1></p>
+
+    <script>
+let n1 =parseFloat(prompt ('Digite valor de a'))
+let n2 =parseFloat(prompt ('Digite valor de b'))
+let n3 =parseFloat(prompt ('Digite valor de c'))
+
+
+//achando delta
+
+let r = ((n2*n2)-(4*n1*n3))
+let delta = Math.sqrt(r)
+
+let coeficient1=(-(n2)+delta)/(2*(n1))
+let coeficient2=(-(n2)-delta)/(2*(n1))
+
+document.write(`O resultado é <br>${coeficient1}</br>`)
+document.write(`O resultado é <br>${coeficient2}</br>`)
+
+    </script>
+</body>
+</html>
